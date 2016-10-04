@@ -1,0 +1,23 @@
+function jfm_parse
+
+raw_path='/home/magland/prvdata/stryker/2015_12_10';
+
+mkdir([raw_path,'/raw_mda']);
+
+G=load('emap64D.mat');
+csvwrite('geom.csv',G.emap(2:end-1,:));
+
+files=dir([raw_path,'/data003']);
+arrays=cell(0,1);
+
+for j=3:6
+    X=read_Intan_RHD2000_file([raw_path,'/data003/460A_151210_142531.rhd']);
+    arrays{end+1}=X.amplifier_data;
+end;
+
+X=cat_timeseries(arrays);
+
+writemda(X,[raw_path,'/raw_mda/concat.mda']);
+
+end
+
