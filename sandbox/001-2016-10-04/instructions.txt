@@ -1,10 +1,12 @@
+**** If you need to parse the raw data:
+
 Download and install mountainlab
 
 Open matlab
 run mountainlab_setup.m from the mountainlab directory
-Parse the data using jfm_parse.m
+Use parse_stryker_raw.m and prepare_dataset.m
 
-From a terminal:
+**** To run sorting and view results
 
 kron-run ms ds1
-kron-view results ms ds1
+kron-view results ms ds1 --curation=curation.script
