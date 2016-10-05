@@ -1,6 +1,6 @@
 **Step 1: Download and install mountainlab**
 
-[https://github.com/magland/mountainlab|https://github.com/magland/mountainlab]
+https://github.com/magland/mountainlab
 
 **Step 2: Parse the raw data .rhd files**
 
